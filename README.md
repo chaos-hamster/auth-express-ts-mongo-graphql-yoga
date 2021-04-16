@@ -16,10 +16,13 @@ tsc --init
 I had to run npm install -g typescript to get tsc to work
 
 
-`./node_modules/.bin/tslint --init
+```
+./node_modules/.bin/tslint --init
+```
 
 update tslint.json:
 
+```
 {
   "defaultSeverity": "error",
   "extends": ["tslint:recommended"],
@@ -29,9 +32,12 @@ update tslint.json:
   },
   "rulesDirectory": []
 }
+```
 
 By default, the TypeScript linter prevents the use of debugging using console statements, hence the need to explicitly tell the linter to revoke the default no-console rule.
 
 Add a src folder and src/app.ts
 
-`npm start
+```
+npm start
+```
