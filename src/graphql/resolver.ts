@@ -48,9 +48,9 @@ export const refresh = async (parent: any, args: any, { request, response }: Con
 
 export const doSomething = async (parent: any, args: any, { request }: Context) => {
     try {
-        const userId = await auth.verifyToken(request)
+        const decoded = await auth.verifyToken(request)
         // then do something on token verification
-        return 'something'
+        return 'something for you: ' + decoded.id;
     }
     catch(err) {
         throw new Error (err.toString())
